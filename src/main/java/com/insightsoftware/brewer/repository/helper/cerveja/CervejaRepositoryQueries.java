@@ -7,7 +7,7 @@ import com.insightsoftware.brewer.model.Cerveja;
 import com.insightsoftware.brewer.repository.filter.CervejaFilter;
 
 public interface CervejaRepositoryQueries {
-	
-	public Page<Cerveja> filtrar(CervejaFilter filtro, Pageable pageable);
+
+  public Page<Cerveja> filtrar(CervejaFilter filtro, Pageable pageable);
 
 }

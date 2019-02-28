@@ -33,62 +33,67 @@ import com.insightsoftware.brewer.service.exception.CidadeJaExistenteException;
 @RequestMapping("/cidades")
 public class CidadesController {
 
-	@Autowired
-	private CidadeRepository cidadeRepository;
-	
-	@Autowired
-	private EstadoRepository estadoRepository;
-	
-	@Autowired
-	private CadastroCidadeService cadastroCidadeService;
 
-	@RequestMapping("/novo")
-	public ModelAndView novo(Cidade cidade) {
-		ModelAndView mv = new ModelAndView("cidade/CadastroCidades");
-		
-		mv.addObject("estados",estadoRepository.findAll());
-		
-		return mv;
-	}
+  private final CidadeRepository cidadeRepository;
+  private final EstadoRepository estadoRepository;
+  private final CadastroCidadeService cadastroCidadeService;
 
-	@Cacheable(value = "cidades", key = "#codigoEstado")
-	@RequestMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody List<Cidade> pesquisarPorCodigoEstado(
-			@RequestParam(name = "estado", defaultValue = "-1") Long codigoEstado) {
+  @Autowired
+  public CidadesController(CidadeRepository cidadeRepository,
+      EstadoRepository estadoRepository,
+      CadastroCidadeService cadastroCidadeService) {
+    this.cidadeRepository = cidadeRepository;
+    this.estadoRepository = estadoRepository;
+    this.cadastroCidadeService = cadastroCidadeService;
+  }
 
-		return cidadeRepository.findByEstadoCodigo(codigoEstado);
-	}
-	
-	@PostMapping("/novo")
-	@CacheEvict(value = "cidades", key ="#cidade.estado.codigo", condition = "#cidade.temEstado()")
-	public ModelAndView salvar(@Valid Cidade cidade, BindingResult result, RedirectAttributes attributes){
-		
-		if (result.hasErrors()){
-			return novo(cidade);
-		}
-		
-		try{
-			cadastroCidadeService.salvar(cidade);
-		}catch(CidadeJaExistenteException e ){
-			result.rejectValue("nome", e.getMessage(), e.getMessage());
-			return novo(cidade);
-		}
-		
-		attributes.addFlashAttribute("mensagem", "Cidade salva com sucesso!");
-		return new ModelAndView("redirect:/cidades/novo");		
-		
-	}
-	
-	@GetMapping
-	public ModelAndView pesquisar(CidadeFilter filter, BindingResult result, @PageableDefault(size = 10) Pageable pageable, HttpServletRequest httpServletRequest){
-		ModelAndView mv = new ModelAndView("cidade/PesquisaCidades");
-		
-		mv.addObject("estados", estadoRepository.findAll());
-		
-		PageWrapper<Cidade> pageWrapper = new PageWrapper<>(cidadeRepository.filtrar(filter, pageable), httpServletRequest);
-		mv.addObject("pagina", pageWrapper);		
-		
-		return mv;
-	}
+  @RequestMapping("/novo")
+  public ModelAndView novo(Cidade cidade) {
+    ModelAndView mv = new ModelAndView("cidade/CadastroCidades");
+    mv.addObject("estados", estadoRepository.findAll());
+    return mv;
+  }
+
+  @Cacheable(value = "cidades", key = "#codigoEstado")
+  @RequestMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+  public @ResponseBody
+  List<Cidade> pesquisarPorCodigoEstado(
+      @RequestParam(name = "estado", defaultValue = "-1") Long codigoEstado) {
+
+    return cidadeRepository.findByEstadoCodigo(codigoEstado);
+  }
+
+  @PostMapping("/novo")
+  @CacheEvict(value = "cidades", key = "#cidade.estado.codigo", condition = "#cidade.temEstado()")
+  public ModelAndView salvar(@Valid Cidade cidade, BindingResult result,
+      RedirectAttributes attributes) {
+
+    if (result.hasErrors()) {
+      return novo(cidade);
+    }
+
+    try {
+      cadastroCidadeService.salvar(cidade);
+    } catch (CidadeJaExistenteException e) {
+      result.rejectValue("nome", e.getMessage(), e.getMessage());
+      return novo(cidade);
+    }
+
+    attributes.addFlashAttribute("mensagem", "Cidade salva com sucesso!");
+    return new ModelAndView("redirect:/cidades/novo");
+
+  }
+
+  @GetMapping
+  public ModelAndView pesquisar(CidadeFilter filter, BindingResult result,
+      @PageableDefault(size = 10) Pageable pageable, HttpServletRequest httpServletRequest) {
+    ModelAndView mv = new ModelAndView("cidade/PesquisaCidades");
+    mv.addObject("estados", estadoRepository.findAll());
+    PageWrapper<Cidade> pageWrapper =
+        new PageWrapper<>(cidadeRepository.filtrar(filter, pageable), httpServletRequest);
+    mv.addObject("pagina", pageWrapper);
+
+    return mv;
+  }
 
 }

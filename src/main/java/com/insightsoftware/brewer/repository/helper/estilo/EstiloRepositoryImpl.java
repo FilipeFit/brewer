@@ -21,38 +21,38 @@ import com.insightsoftware.brewer.repository.paginacao.PaginacaoUtil;
 
 public class EstiloRepositoryImpl implements EstiloRepositoryQueries {
 
-	@PersistenceContext
-	private EntityManager manager;
+  @PersistenceContext
+  private EntityManager manager;
 
-	@Autowired
-	private PaginacaoUtil paginacaoUtil;
+  @Autowired
+  private PaginacaoUtil paginacaoUtil;
 
-	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
-	@Override
-	public Page<Estilo> filtrar(EstiloFilter filtro, Pageable pageable) {
-		Criteria criteria = manager.unwrap(Session.class).createCriteria(Estilo.class);
+  @SuppressWarnings("unchecked")
+  @Transactional(readOnly = true)
+  @Override
+  public Page<Estilo> filtrar(EstiloFilter filtro, Pageable pageable) {
+    Criteria criteria = manager.unwrap(Session.class).createCriteria(Estilo.class);
 
-		paginacaoUtil.preparar(criteria, pageable);
+    paginacaoUtil.preparar(criteria, pageable);
 
-		adicionarFiltro(filtro, criteria);
+    adicionarFiltro(filtro, criteria);
 
-		return new PageImpl<>(criteria.list(), pageable, total(filtro));
-	}
+    return new PageImpl<>(criteria.list(), pageable, total(filtro));
+  }
 
-	private void adicionarFiltro(EstiloFilter filtro, Criteria criteria) {
+  private void adicionarFiltro(EstiloFilter filtro, Criteria criteria) {
 
-		if (!StringUtils.isEmpty(filtro.getNome())) {
-			criteria.add(Restrictions.ilike("nome", filtro.getNome(), MatchMode.ANYWHERE));
-		}
+    if (!StringUtils.isEmpty(filtro.getNome())) {
+      criteria.add(Restrictions.ilike("nome", filtro.getNome(), MatchMode.ANYWHERE));
+    }
 
-	}
+  }
 
-	private Long total(EstiloFilter filtro) {
-		Criteria criteria = manager.unwrap(Session.class).createCriteria(Estilo.class);
-		adicionarFiltro(filtro, criteria);
-		criteria.setProjection(Projections.rowCount());
-		return (Long) criteria.uniqueResult();
-	}
+  private Long total(EstiloFilter filtro) {
+    Criteria criteria = manager.unwrap(Session.class).createCriteria(Estilo.class);
+    adicionarFiltro(filtro, criteria);
+    criteria.setProjection(Projections.rowCount());
+    return (Long) criteria.uniqueResult();
+  }
 
 }

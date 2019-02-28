@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.insightsoftware.brewer.model.Grupo;
 
 @Repository
-public interface GrupoRepository extends JpaRepository<Grupo, Long>{
+public interface GrupoRepository extends JpaRepository<Grupo, Long> {
 
 }

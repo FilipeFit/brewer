@@ -20,38 +20,44 @@ import com.insightsoftware.brewer.service.exception.SenhaObrigatoriaUsuarioExcep
 @RequestMapping("/usuarios")
 public class UsuariosController {
 
-	@Autowired
-	private CadastroUsuarioService cadastroUsuarioService;
-	
-	@Autowired
-	private GrupoRepository grupoRepository;
+  private final CadastroUsuarioService cadastroUsuarioService;
+  private final GrupoRepository grupoRepository;
 
-	@RequestMapping("/novo")
-	public ModelAndView novo(Usuario usuario) {
-		ModelAndView mv = new ModelAndView("usuario/CadastroUsuario");
-		mv.addObject("grupos", grupoRepository.findAll());
-		return mv;
-	}
+  @Autowired
+  public UsuariosController(
+      CadastroUsuarioService cadastroUsuarioService,
+      GrupoRepository grupoRepository) {
+    this.cadastroUsuarioService = cadastroUsuarioService;
+    this.grupoRepository = grupoRepository;
+  }
 
-	@PostMapping("/novo")
-	public ModelAndView salvar(@Valid Usuario usuario, BindingResult result, RedirectAttributes attributes) {
+  @RequestMapping("/novo")
+  public ModelAndView novo(Usuario usuario) {
+    ModelAndView mv = new ModelAndView("usuario/CadastroUsuario");
+    mv.addObject("grupos", grupoRepository.findAll());
+    return mv;
+  }
 
-		if (result.hasErrors()) {
-			return novo(usuario);
-		}
+  @PostMapping("/novo")
+  public ModelAndView salvar(@Valid Usuario usuario, BindingResult result,
+      RedirectAttributes attributes) {
 
-		try {
-			cadastroUsuarioService.salvar(usuario);
-		} catch (EmailCadastradoException e) {
-			result.rejectValue("email", e.getMessage(), e.getMessage());
-			return novo(usuario);
-		} catch (SenhaObrigatoriaUsuarioException e){
-			result.rejectValue("senha", e.getMessage(), e.getMessage());
-			return novo(usuario);
-		}
+    if (result.hasErrors()) {
+      return novo(usuario);
+    }
 
-		attributes.addFlashAttribute("mensagem", "Usuário salvo com sucesso!");
-		return new ModelAndView("redirect:/usuarios/novo");
-	}
+    try {
+      cadastroUsuarioService.salvar(usuario);
+    } catch (EmailCadastradoException e) {
+      result.rejectValue("email", e.getMessage(), e.getMessage());
+      return novo(usuario);
+    } catch (SenhaObrigatoriaUsuarioException e) {
+      result.rejectValue("senha", e.getMessage(), e.getMessage());
+      return novo(usuario);
+    }
+
+    attributes.addFlashAttribute("mensagem", "Usuário salvo com sucesso!");
+    return new ModelAndView("redirect:/usuarios/novo");
+  }
 
 }

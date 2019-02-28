@@ -7,5 +7,5 @@ import com.insightsoftware.brewer.model.Cidade;
 import com.insightsoftware.brewer.repository.filter.CidadeFilter;
 
 public interface CidadeRepositoryQueries {
-	public Page<Cidade> filtrar(CidadeFilter filter, Pageable pageable);
+  public Page<Cidade> filtrar(CidadeFilter filter, Pageable pageable);
 }

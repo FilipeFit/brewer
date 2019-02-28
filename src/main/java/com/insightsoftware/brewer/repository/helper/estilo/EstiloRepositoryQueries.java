@@ -7,7 +7,7 @@ import com.insightsoftware.brewer.model.Estilo;
 import com.insightsoftware.brewer.repository.filter.EstiloFilter;
 
 public interface EstiloRepositoryQueries {
-	
-	public Page<Estilo> filtrar(EstiloFilter filtro, Pageable pageable);
+
+  public Page<Estilo> filtrar(EstiloFilter filtro, Pageable pageable);
 
 }

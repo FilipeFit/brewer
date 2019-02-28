@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.insightsoftware.brewer.model.Estado;
 
 @Repository
-public interface EstadoRepository extends JpaRepository<Estado, Long>{
-	
+public interface EstadoRepository extends JpaRepository<Estado, Long> {
+
 
 }

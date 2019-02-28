@@ -21,44 +21,44 @@ import com.insightsoftware.brewer.repository.paginacao.PaginacaoUtil;
 
 public class CidadeRepositoryImpl implements CidadeRepositoryQueries {
 
-	@PersistenceContext
-	private EntityManager entityManager;
+  @PersistenceContext
+  private EntityManager entityManager;
 
-	@Autowired
-	PaginacaoUtil paginacaoUtil;
+  @Autowired
+  PaginacaoUtil paginacaoUtil;
 
-	@SuppressWarnings("unchecked")
-	@Override
-	@Transactional(readOnly = true)
-	public Page<Cidade> filtrar(CidadeFilter filter, Pageable pageable) {
-		Criteria criteria = entityManager.unwrap(Session.class).createCriteria(Cidade.class);
+  @SuppressWarnings("unchecked")
+  @Override
+  @Transactional(readOnly = true)
+  public Page<Cidade> filtrar(CidadeFilter filter, Pageable pageable) {
+    Criteria criteria = entityManager.unwrap(Session.class).createCriteria(Cidade.class);
 
-		paginacaoUtil.preparar(criteria, pageable);
-		adicionaFiltro(filter, criteria);
-		criteria.createAlias("estado", "e");
-		
-		return new PageImpl<>(criteria.list(), pageable, total(filter));
-	}
-	
-	private void adicionaFiltro(CidadeFilter filter, Criteria criteria) {
+    paginacaoUtil.preparar(criteria, pageable);
+    adicionaFiltro(filter, criteria);
+    criteria.createAlias("estado", "e");
 
-		if (filter != null) {
-			if (!StringUtils.isEmpty(filter.getNome())) {
-				criteria.add(Restrictions.ilike("nome", filter.getNome(), MatchMode.ANYWHERE));
-			}
+    return new PageImpl<>(criteria.list(), pageable, total(filter));
+  }
 
-			if (!StringUtils.isEmpty(filter.getEstado())) {
-				criteria.add(Restrictions.eq("estado", filter.getEstado()));
-			}
-		}
+  private void adicionaFiltro(CidadeFilter filter, Criteria criteria) {
 
-	}	
-	
-	private Long total(CidadeFilter filter) {
-		Criteria criteria = entityManager.unwrap(Session.class).createCriteria(Cidade.class);
-		adicionaFiltro(filter, criteria);
-		criteria.setProjection(Projections.rowCount());
-		return (Long) criteria.uniqueResult();
-	}	
+    if (filter != null) {
+      if (!StringUtils.isEmpty(filter.getNome())) {
+        criteria.add(Restrictions.ilike("nome", filter.getNome(), MatchMode.ANYWHERE));
+      }
+
+      if (!StringUtils.isEmpty(filter.getEstado())) {
+        criteria.add(Restrictions.eq("estado", filter.getEstado()));
+      }
+    }
+
+  }
+
+  private Long total(CidadeFilter filter) {
+    Criteria criteria = entityManager.unwrap(Session.class).createCriteria(Cidade.class);
+    adicionaFiltro(filter, criteria);
+    criteria.setProjection(Projections.rowCount());
+    return (Long) criteria.uniqueResult();
+  }
 
 }

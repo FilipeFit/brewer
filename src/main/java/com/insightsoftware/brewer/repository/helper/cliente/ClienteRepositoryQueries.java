@@ -8,6 +8,6 @@ import com.insightsoftware.brewer.repository.filter.ClienteFilter;
 
 public interface ClienteRepositoryQueries {
 
-	public Page<Cliente> filtrar(ClienteFilter filter, Pageable pageable);
+  public Page<Cliente> filtrar(ClienteFilter filter, Pageable pageable);
 
 }

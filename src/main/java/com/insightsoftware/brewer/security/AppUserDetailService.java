@@ -19,26 +19,32 @@ import com.insightsoftware.brewer.model.Usuario;
 import com.insightsoftware.brewer.repository.UsuarioRepository;
 
 @Service
-public class AppUserDetailService implements UserDetailsService{
+public class AppUserDetailService implements UserDetailsService {
 
-	@Autowired
-	private UsuarioRepository usuarioRepository;
-	
-	@Override
-	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-		
-		Optional<Usuario> usuarioOptional = usuarioRepository.porEmaileAtivo(email);
-		Usuario usuario = usuarioOptional.orElseThrow(() -> new UsernameNotFoundException("Usuário e/ou senha incorretos"));
-		return new User(usuario.getEmail(), usuario.getSenha(), getPermissoes(usuario));
-	}
-	
-	private Collection<? extends GrantedAuthority> getPermissoes(Usuario usuario){
-		Set<SimpleGrantedAuthority> authorities = new HashSet<>();
-		
-		List<String> permissoes = usuarioRepository.permissoes(usuario);
-		permissoes.forEach(p -> authorities.add(new SimpleGrantedAuthority(p.toUpperCase())));
-		
-		return authorities;
-	}
+  private final UsuarioRepository usuarioRepository;
+
+  @Autowired
+  public AppUserDetailService(
+      UsuarioRepository usuarioRepository) {
+    this.usuarioRepository = usuarioRepository;
+  }
+
+  @Override
+  public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+
+    Optional<Usuario> usuarioOptional = usuarioRepository.porEmaileAtivo(email);
+    Usuario usuario = usuarioOptional.orElseThrow(
+        () -> new UsernameNotFoundException("Usuário e/ou senha incorretos"));
+    return new User(usuario.getEmail(), usuario.getSenha(), getPermissoes(usuario));
+  }
+
+  private Collection<? extends GrantedAuthority> getPermissoes(Usuario usuario) {
+    Set<SimpleGrantedAuthority> authorities = new HashSet<>();
+
+    List<String> permissoes = usuarioRepository.permissoes(usuario);
+    permissoes.forEach(p -> authorities.add(new SimpleGrantedAuthority(p.toUpperCase())));
+
+    return authorities;
+  }
 
 }

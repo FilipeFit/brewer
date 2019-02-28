@@ -11,73 +11,73 @@ import javax.validation.constraints.NotNull;
 @Embeddable
 public class Endereco implements Serializable {
 
-	private static final long serialVersionUID = -4855470970432630854L;
-	private String logradouro;
-	private String numero;
-	private String complemento;
-	private String cep;
+  private static final long serialVersionUID = -4855470970432630854L;
+  private String logradouro;
+  private String numero;
+  private String complemento;
+  private String cep;
 
-	@NotNull(message = "A cidade é obrigatória")
-	@ManyToOne
-	@JoinColumn(name = "codigo_cidade")
-	private Cidade cidade;
+  @NotNull(message = "A cidade é obrigatória")
+  @ManyToOne
+  @JoinColumn(name = "codigo_cidade")
+  private Cidade cidade;
 
-	@Transient
-	private Estado estado;
+  @Transient
+  private Estado estado;
 
-	public String getLogradouro() {
-		return logradouro;
-	}
+  public String getLogradouro() {
+    return logradouro;
+  }
 
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
-	}
+  public void setLogradouro(String logradouro) {
+    this.logradouro = logradouro;
+  }
 
-	public String getNumero() {
-		return numero;
-	}
+  public String getNumero() {
+    return numero;
+  }
 
-	public void setNumero(String numero) {
-		this.numero = numero;
-	}
+  public void setNumero(String numero) {
+    this.numero = numero;
+  }
 
-	public String getComplemento() {
-		return complemento;
-	}
+  public String getComplemento() {
+    return complemento;
+  }
 
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
-	}
+  public void setComplemento(String complemento) {
+    this.complemento = complemento;
+  }
 
-	public String getCep() {
-		return cep;
-	}
+  public String getCep() {
+    return cep;
+  }
 
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
+  public void setCep(String cep) {
+    this.cep = cep;
+  }
 
-	public Cidade getCidade() {
-		return cidade;
-	}
+  public Cidade getCidade() {
+    return cidade;
+  }
 
-	public void setCidade(Cidade cidade) {
-		this.cidade = cidade;
-	}
+  public void setCidade(Cidade cidade) {
+    this.cidade = cidade;
+  }
 
-	public Estado getEstado() {
-		return estado;
-	}
+  public Estado getEstado() {
+    return estado;
+  }
 
-	public void setEstado(Estado estado) {
-		this.estado = estado;
-	}
-	
-	public String getNomeCidadeSiglaEstado(){
-		if(this.cidade != null){
-			return this.cidade.getNome() + "/" + this.cidade.getEstado().getSigla();
-		}
-		return null;
-	}
+  public void setEstado(Estado estado) {
+    this.estado = estado;
+  }
+
+  public String getNomeCidadeSiglaEstado() {
+    if (this.cidade != null) {
+      return this.cidade.getNome() + "/" + this.cidade.getEstado().getSigla();
+    }
+    return null;
+  }
 
 }

@@ -12,19 +12,23 @@ import com.insightsoftware.brewer.service.exception.NomeEstiloJaCadastradoExcept
 
 @Service
 public class CadastroEstiloService {
-	
-	@Autowired
-	private EstiloRepository estiloRepository;
-	
-	@Transactional
-	public Estilo salvar(Estilo estilo){
-		
-		Optional<Estilo> estiloOptional = estiloRepository.findByNomeIgnoreCase(estilo.getNome());
-		if(estiloOptional.isPresent()){
-			throw new NomeEstiloJaCadastradoException("Nome do estilo já cadastrado");
-		}
-		
-		return estiloRepository.saveAndFlush(estilo);
-	}
+
+  private final EstiloRepository estiloRepository;
+
+  public CadastroEstiloService(
+      EstiloRepository estiloRepository) {
+    this.estiloRepository = estiloRepository;
+  }
+
+  @Transactional
+  public Estilo salvar(Estilo estilo) {
+
+    Optional<Estilo> estiloOptional = estiloRepository.findByNomeIgnoreCase(estilo.getNome());
+    if (estiloOptional.isPresent()) {
+      throw new NomeEstiloJaCadastradoException("Nome do estilo já cadastrado");
+    }
+
+    return estiloRepository.saveAndFlush(estilo);
+  }
 
 }

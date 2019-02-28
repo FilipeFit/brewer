@@ -17,49 +17,49 @@ import com.insightsoftware.brewer.security.AppUserDetailService;
 
 @EnableWebSecurity
 @ComponentScan(basePackageClasses = AppUserDetailService.class)
-public class SecurityConfig extends WebSecurityConfigurerAdapter{
-	
-	@Autowired
-	private UserDetailsService userDetailsService;
-	
-	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
-	}
-	
-	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.ignoring()
-			.antMatchers("/layout/**")
-			.antMatchers("/images/**");
-		
-	}
-	
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http
-			.authorizeRequests()
-				.antMatchers("/cidades/**").hasRole("CADASTRAR_CIDADE")
-				.antMatchers("/usuarios/**").hasRole("CADASTRAR_USUARIO")
-				.anyRequest().authenticated()
-				.and()
-			.formLogin()
-				.loginPage("/login")
-				.permitAll()
-				.and()
-			.logout()
-				.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-				.and()
-			.exceptionHandling()
-				.accessDeniedPage("/403")
-				.and()
-			.sessionManagement()
-				.invalidSessionUrl("/login");
-	}
-	
-	@Bean
-	public PasswordEncoder passwordEncoder(){
-		return new BCryptPasswordEncoder();
-	}
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+  @Autowired
+  private UserDetailsService userDetailsService;
+
+  @Override
+  protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+  }
+
+  @Override
+  public void configure(WebSecurity web) throws Exception {
+    web.ignoring()
+        .antMatchers("/layout/**")
+        .antMatchers("/images/**");
+
+  }
+
+  @Override
+  protected void configure(HttpSecurity http) throws Exception {
+    http
+        .authorizeRequests()
+        .antMatchers("/cidades/**").hasRole("CADASTRAR_CIDADE")
+        .antMatchers("/usuarios/**").hasRole("CADASTRAR_USUARIO")
+        .anyRequest().authenticated()
+        .and()
+        .formLogin()
+        .loginPage("/login")
+        .permitAll()
+        .and()
+        .logout()
+        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+        .and()
+        .exceptionHandling()
+        .accessDeniedPage("/403")
+        .and()
+        .sessionManagement()
+        .invalidSessionUrl("/login");
+  }
+
+  @Bean
+  public PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
+  }
 
 }

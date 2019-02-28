@@ -30,194 +30,191 @@ import com.insightsoftware.brewer.validation.SKU;
 @Table(name = "cerveja")
 public class Cerveja implements Serializable {
 
-	private static final long serialVersionUID = 745378806145882779L;
+  private static final long serialVersionUID = 745378806145882779L;
 
-	@PrePersist
-	@PreUpdate
-	private void prePersistUpdate() {
-		sku = sku.toUpperCase();
-	}
+  @PrePersist
+  @PreUpdate
+  private void prePersistUpdate() {
+    sku = sku.toUpperCase();
+  }
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long codigo;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long codigo;
 
-	@SKU
-	@NotEmpty(message = "SKU é obrigatório")
-	private String sku;
+  @SKU
+  @NotEmpty(message = "SKU é obrigatório")
+  private String sku;
 
-	@NotEmpty(message = "Nome é obrigatório")
-	@Size(min = 1, max = 50, message = "O nome deve estar entre 1 e 50 caracteres")
-	private String nome;
+  @NotEmpty(message = "Nome é obrigatório")
+  @Size(min = 1, max = 50, message = "O nome deve estar entre 1 e 50 caracteres")
+  private String nome;
 
-	@NotBlank(message = "A descrição é um valor obrigatório")
-	@Size(min = 1, max = 50, message = "A descrição deve ter entre 1 e 50 caracteres")
-	private String descricao;
+  @NotBlank(message = "A descrição é um valor obrigatório")
+  @Size(min = 1, max = 50, message = "A descrição deve ter entre 1 e 50 caracteres")
+  private String descricao;
 
-	@NotNull(message = "O valor é obrigatório")
-	@DecimalMin(value = "1.00", message = "Não é possível incluir uma cerveja que custe menos que R$ 1,00")
-	@DecimalMax(value = "9999.99", message = "Não é possível incluir uma cerveja que custe mais que R$ 9999,99")
-	private BigDecimal valor;
+  @NotNull(message = "O valor é obrigatório")
+  @DecimalMin(value = "1.00",
+      message = "Não é possível incluir uma cerveja que custe menos que R$ 1,00")
+  @DecimalMax(value = "9999.99",
+      message = "Não é possível incluir uma cerveja que custe mais que R$ 9999,99")
+  private BigDecimal valor;
 
-	@NotNull(message = "O teor alcoolico é obrigatório")
-	@DecimalMax(value = "100.0", message = "O teor alcoolico deve ser menor que 100%")
-	@Column(name = "teor_alcoolico")
-	private BigDecimal teorAlcoolico;
+  @NotNull(message = "O teor alcoolico é obrigatório")
+  @DecimalMax(value = "100.0", message = "O teor alcoolico deve ser menor que 100%")
+  @Column(name = "teor_alcoolico")
+  private BigDecimal teorAlcoolico;
 
-	@NotNull(message = "A comissão é obrigatória")
-	@DecimalMax(value = "20.0", message = "A comissão máxima é de 20%")
-	private BigDecimal comissao;
+  @NotNull(message = "A comissão é obrigatória")
+  @DecimalMax(value = "20.0", message = "A comissão máxima é de 20%")
+  private BigDecimal comissao;
 
-	@NotNull(message = "A quantidade em estoque é obrigatória")
-	@Max(value = 9999, message = "A quantidade máxima em estoque deve ser de 9.999")
-	@Column(name = "quantidade_estoque")
-	private Integer quantidadeEstoque;
+  @NotNull(message = "A quantidade em estoque é obrigatória")
+  @Max(value = 9999, message = "A quantidade máxima em estoque deve ser de 9.999")
+  @Column(name = "quantidade_estoque")
+  private Integer quantidadeEstoque;
 
-	@NotNull(message = "A origem é obrigatória")
-	@Enumerated(EnumType.STRING)
-	private Origem origem;
+  @NotNull(message = "A origem é obrigatória")
+  @Enumerated(EnumType.STRING)
+  private Origem origem;
 
-	@NotNull(message = "O sabor é obrigatório")
-	@Enumerated(EnumType.STRING)
-	private Sabor sabor;
+  @NotNull(message = "O sabor é obrigatório")
+  @Enumerated(EnumType.STRING)
+  private Sabor sabor;
 
-	@NotNull(message = "O estilo é obrigatório")
-	@ManyToOne
-	@JoinColumn(name = "codigo_estilo")
-	private Estilo estilo;
+  @NotNull(message = "O estilo é obrigatório")
+  @ManyToOne
+  @JoinColumn(name = "codigo_estilo")
+  private Estilo estilo;
 
-	private String foto;
+  private String foto;
 
-	@Column(name = "content_Type")
-	private String contentType;
+  @Column(name = "content_Type")
+  private String contentType;
 
-	public Long getCodigo() {
-		return codigo;
-	}
+  public Long getCodigo() {
+    return codigo;
+  }
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
+  public void setCodigo(Long codigo) {
+    this.codigo = codigo;
+  }
 
-	public String getSku() {
-		return sku;
-	}
+  public String getSku() {
+    return sku;
+  }
 
-	public void setSku(String sku) {
-		this.sku = sku;
-	}
+  public void setSku(String sku) {
+    this.sku = sku;
+  }
 
-	public String getNome() {
-		return nome;
-	}
+  public String getNome() {
+    return nome;
+  }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-	public String getDescricao() {
-		return descricao;
-	}
+  public String getDescricao() {
+    return descricao;
+  }
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
+  public void setDescricao(String descricao) {
+    this.descricao = descricao;
+  }
 
-	public BigDecimal getValor() {
-		return valor;
-	}
+  public BigDecimal getValor() {
+    return valor;
+  }
 
-	public void setValor(BigDecimal valor) {
-		this.valor = valor;
-	}
+  public void setValor(BigDecimal valor) {
+    this.valor = valor;
+  }
 
-	public BigDecimal getTeorAlcoolico() {
-		return teorAlcoolico;
-	}
+  public BigDecimal getTeorAlcoolico() {
+    return teorAlcoolico;
+  }
 
-	public void setTeorAlcoolico(BigDecimal teorAlcoolico) {
-		this.teorAlcoolico = teorAlcoolico;
-	}
+  public void setTeorAlcoolico(BigDecimal teorAlcoolico) {
+    this.teorAlcoolico = teorAlcoolico;
+  }
 
-	public BigDecimal getComissao() {
-		return comissao;
-	}
+  public BigDecimal getComissao() {
+    return comissao;
+  }
 
-	public void setComissao(BigDecimal comissao) {
-		this.comissao = comissao;
-	}
+  public void setComissao(BigDecimal comissao) {
+    this.comissao = comissao;
+  }
 
-	public Integer getQuantidadeEstoque() {
-		return quantidadeEstoque;
-	}
+  public Integer getQuantidadeEstoque() {
+    return quantidadeEstoque;
+  }
 
-	public void setQuantidadeEstoque(Integer quantidadeEstoque) {
-		this.quantidadeEstoque = quantidadeEstoque;
-	}
+  public void setQuantidadeEstoque(Integer quantidadeEstoque) {
+    this.quantidadeEstoque = quantidadeEstoque;
+  }
 
-	public Origem getOrigem() {
-		return origem;
-	}
+  public Origem getOrigem() {
+    return origem;
+  }
 
-	public void setOrigem(Origem origem) {
-		this.origem = origem;
-	}
+  public void setOrigem(Origem origem) {
+    this.origem = origem;
+  }
 
-	public Sabor getSabor() {
-		return sabor;
-	}
+  public Sabor getSabor() {
+    return sabor;
+  }
 
-	public void setSabor(Sabor sabor) {
-		this.sabor = sabor;
-	}
+  public void setSabor(Sabor sabor) {
+    this.sabor = sabor;
+  }
 
-	public Estilo getEstilo() {
-		return estilo;
-	}
+  public Estilo getEstilo() {
+    return estilo;
+  }
 
-	public void setEstilo(Estilo estilo) {
-		this.estilo = estilo;
-	}
+  public void setEstilo(Estilo estilo) {
+    this.estilo = estilo;
+  }
 
-	public String getFoto() {
-		return foto;
-	}
+  public String getFoto() {
+    return foto;
+  }
 
-	public void setFoto(String foto) {
-		this.foto = foto;
-	}
+  public void setFoto(String foto) {
+    this.foto = foto;
+  }
 
-	public String getContentType() {
-		return contentType;
-	}
+  public String getContentType() {
+    return contentType;
+  }
 
-	public void setContentType(String contentType) {
-		this.contentType = contentType;
-	}
+  public void setContentType(String contentType) {
+    this.contentType = contentType;
+  }
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
-		return result;
-	}
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+    return result;
+  }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Cerveja other = (Cerveja) obj;
-		if (codigo == null) {
-			if (other.codigo != null)
-				return false;
-		} else if (!codigo.equals(other.codigo))
-			return false;
-		return true;
-	}
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) { return true; }
+    if (obj == null) { return false; }
+    if (getClass() != obj.getClass()) { return false; }
+    Cerveja other = (Cerveja) obj;
+    if (codigo == null) {
+      if (other.codigo != null) { return false; }
+    } else if (!codigo.equals(other.codigo)) { return false; }
+    return true;
+  }
 
 }

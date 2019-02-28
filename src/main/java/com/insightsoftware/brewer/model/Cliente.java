@@ -32,128 +32,123 @@ import com.insightsoftware.brewer.model.validation.group.CpfGroup;
 @GroupSequenceProvider(ClienteGroupSequenceProvider.class)
 public class Cliente implements Serializable {
 
-	private static final long serialVersionUID = 134900381627665324L;
+  private static final long serialVersionUID = 134900381627665324L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long codigo;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long codigo;
 
-	@NotEmpty(message = "Nome é obrigatório")
-	private String nome;
+  @NotEmpty(message = "Nome é obrigatório")
+  private String nome;
 
-	@NotNull(message="O tipo da pessoa é obrigatória")
-	@Column(name = "tipo_pessoa")
-	@Enumerated(EnumType.STRING)
-	private TipoPessoa tipoPessoa;
+  @NotNull(message = "O tipo da pessoa é obrigatória")
+  @Column(name = "tipo_pessoa")
+  @Enumerated(EnumType.STRING)
+  private TipoPessoa tipoPessoa;
 
-	@NotBlank(message="O CPF/CNPJ é obrigatório")
-	@CPF(groups = CpfGroup.class)
-	@CNPJ(groups = CnpjGroup.class)
-	@Column(name = "cpf_cnpj")
-	private String cpfOuCnpj;
+  @NotBlank(message = "O CPF/CNPJ é obrigatório")
+  @CPF(groups = CpfGroup.class)
+  @CNPJ(groups = CnpjGroup.class)
+  @Column(name = "cpf_cnpj")
+  private String cpfOuCnpj;
 
-	private String telefone;
+  private String telefone;
 
-	@Email(message="Email inválido")
-	private String email;
+  @Email(message = "Email inválido")
+  private String email;
 
-	@Embedded
-	private Endereco endereco;
-	
-	@PrePersist
-	@PreUpdate
-	private void prePersistPreUpdate(){
-		this.cpfOuCnpj = TipoPessoa.removerFormatacao(this.cpfOuCnpj);
-	}
-	
-	@PostLoad
-	private void postLoad(){
-		this.cpfOuCnpj = this.tipoPessoa.formatar(this.cpfOuCnpj);
-	}
-	
-	public String getCpfOuCnpjSemFormatacao(){
-		return TipoPessoa.removerFormatacao(this.cpfOuCnpj);
-	}
+  @Embedded
+  private Endereco endereco;
 
-	public Long getCodigo() {
-		return codigo;
-	}
+  @PrePersist
+  @PreUpdate
+  private void prePersistPreUpdate() {
+    this.cpfOuCnpj = TipoPessoa.removerFormatacao(this.cpfOuCnpj);
+  }
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
+  @PostLoad
+  private void postLoad() {
+    this.cpfOuCnpj = this.tipoPessoa.formatar(this.cpfOuCnpj);
+  }
 
-	public String getNome() {
-		return nome;
-	}
+  public String getCpfOuCnpjSemFormatacao() {
+    return TipoPessoa.removerFormatacao(this.cpfOuCnpj);
+  }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+  public Long getCodigo() {
+    return codigo;
+  }
 
-	public TipoPessoa getTipoPessoa() {
-		return tipoPessoa;
-	}
+  public void setCodigo(Long codigo) {
+    this.codigo = codigo;
+  }
 
-	public void setTipoPessoa(TipoPessoa tipoPessoa) {
-		this.tipoPessoa = tipoPessoa;
-	}
+  public String getNome() {
+    return nome;
+  }
 
-	public String getCpfOuCnpj() {
-		return cpfOuCnpj;
-	}
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-	public void setCpfOuCnpj(String cpfOuCnpj) {
-		this.cpfOuCnpj = cpfOuCnpj;
-	}
+  public TipoPessoa getTipoPessoa() {
+    return tipoPessoa;
+  }
 
-	public String getTelefone() {
-		return telefone;
-	}
+  public void setTipoPessoa(TipoPessoa tipoPessoa) {
+    this.tipoPessoa = tipoPessoa;
+  }
 
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
+  public String getCpfOuCnpj() {
+    return cpfOuCnpj;
+  }
 
-	public String getEmail() {
-		return email;
-	}
+  public void setCpfOuCnpj(String cpfOuCnpj) {
+    this.cpfOuCnpj = cpfOuCnpj;
+  }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+  public String getTelefone() {
+    return telefone;
+  }
 
-	public Endereco getEndereco() {
-		return endereco;
-	}
+  public void setTelefone(String telefone) {
+    this.telefone = telefone;
+  }
 
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
-	}
+  public String getEmail() {
+    return email;
+  }
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
-		return result;
-	}
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Cliente other = (Cliente) obj;
-		if (codigo == null) {
-			if (other.codigo != null)
-				return false;
-		} else if (!codigo.equals(other.codigo))
-			return false;
-		return true;
-	}
+  public Endereco getEndereco() {
+    return endereco;
+  }
+
+  public void setEndereco(Endereco endereco) {
+    this.endereco = endereco;
+  }
+
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+    return result;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) { return true; }
+    if (obj == null) { return false; }
+    if (getClass() != obj.getClass()) { return false; }
+    Cliente other = (Cliente) obj;
+    if (codigo == null) {
+      if (other.codigo != null) { return false; }
+    } else if (!codigo.equals(other.codigo)) { return false; }
+    return true;
+  }
 
 }

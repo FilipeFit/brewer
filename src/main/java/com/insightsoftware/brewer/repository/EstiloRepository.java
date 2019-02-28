@@ -9,8 +9,8 @@ import com.insightsoftware.brewer.model.Estilo;
 import com.insightsoftware.brewer.repository.helper.estilo.EstiloRepositoryQueries;
 
 @Repository
-public interface EstiloRepository extends JpaRepository<Estilo, Long>, EstiloRepositoryQueries{
-	
-	public Optional<Estilo> findByNomeIgnoreCase(String nome);
+public interface EstiloRepository extends JpaRepository<Estilo, Long>, EstiloRepositoryQueries {
+
+  public Optional<Estilo> findByNomeIgnoreCase(String nome);
 
 }

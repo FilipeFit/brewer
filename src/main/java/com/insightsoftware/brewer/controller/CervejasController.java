@@ -28,49 +28,55 @@ import com.insightsoftware.brewer.service.CadastroCervejaService;
 @RequestMapping("/cervejas")
 public class CervejasController {
 
-	@Autowired
-	private EstiloRepository estiloRepository;
+  private final EstiloRepository estiloRepository;
+  private final CadastroCervejaService cadastroCervejaService;
+  private final CervejaRepository cervejaRepository;
 
-	@Autowired
-	private CadastroCervejaService cadastroCervejaService;
+  @Autowired
+  public CervejasController(EstiloRepository estiloRepository,
+      CadastroCervejaService cadastroCervejaService,
+      CervejaRepository cervejaRepository) {
+    this.estiloRepository = estiloRepository;
+    this.cadastroCervejaService = cadastroCervejaService;
+    this.cervejaRepository = cervejaRepository;
+  }
 
-	@Autowired
-	private CervejaRepository cervejaRepository;
+  @RequestMapping("/novo")
+  public ModelAndView novo(Cerveja cerveja) {
 
-	@RequestMapping("/novo")
-	public ModelAndView novo(Cerveja cerveja) {
+    ModelAndView mv = new ModelAndView("cerveja/CadastroCerveja");
+    mv.addObject("sabores", Sabor.values());
+    mv.addObject("estilos", estiloRepository.findAll());
+    mv.addObject("origens", Origem.values());
 
-		ModelAndView mv = new ModelAndView("cerveja/CadastroCerveja");
-		mv.addObject("sabores", Sabor.values());
-		mv.addObject("estilos", estiloRepository.findAll());
-		mv.addObject("origens", Origem.values());
+    return mv;
+  }
 
-		return mv;
-	}
+  @RequestMapping(value = "/novo", method = RequestMethod.POST)
+  public ModelAndView cadastrar(@Valid Cerveja cerveja, BindingResult result, Model model,
+      RedirectAttributes attributes) {
 
-	@RequestMapping(value = "/novo", method = RequestMethod.POST)
-	public ModelAndView cadastrar(@Valid Cerveja cerveja, BindingResult result, Model model,
-			RedirectAttributes attributes) {
+    if (result.hasErrors()) {
+      return novo(cerveja);
+    }
 
-		if (result.hasErrors()) {
-			return novo(cerveja);
-		}
+    cadastroCervejaService.salvar(cerveja);
+    attributes.addFlashAttribute("mensagem", "Cerveja salva com sucesso");
+    return new ModelAndView("redirect:/cervejas/novo");
+  }
 
-		cadastroCervejaService.salvar(cerveja);
-		attributes.addFlashAttribute("mensagem", "Cerveja salva com sucesso");
-		return new ModelAndView("redirect:/cervejas/novo");
-	}
+  @GetMapping
+  public ModelAndView pesquisar(CervejaFilter cervejaFilter, BindingResult result,
+      @PageableDefault(size = 2) Pageable pageable, HttpServletRequest httpServletRequest) {
+    ModelAndView mv = new ModelAndView("cerveja/PesquisaCervejas");
+    mv.addObject("estilos", estiloRepository.findAll());
+    mv.addObject("sabores", Sabor.values());
+    mv.addObject("origens", Origem.values());
 
-	@GetMapping
-	public ModelAndView pesquisar(CervejaFilter cervejaFilter, BindingResult result,@PageableDefault(size = 2) Pageable pageable, HttpServletRequest httpServletRequest) {
-		ModelAndView mv = new ModelAndView("cerveja/PesquisaCervejas");
-		mv.addObject("estilos", estiloRepository.findAll());
-		mv.addObject("sabores", Sabor.values());
-		mv.addObject("origens", Origem.values());
-
-		PageWrapper<Cerveja> paginaWrapper = new PageWrapper<>(cervejaRepository.filtrar(cervejaFilter, pageable),httpServletRequest);
-		mv.addObject("pagina", paginaWrapper);
-		return mv;
-	}
+    PageWrapper<Cerveja> paginaWrapper =
+        new PageWrapper<>(cervejaRepository.filtrar(cervejaFilter, pageable), httpServletRequest);
+    mv.addObject("pagina", paginaWrapper);
+    return mv;
+  }
 
 }

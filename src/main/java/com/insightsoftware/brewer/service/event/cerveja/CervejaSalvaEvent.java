@@ -6,18 +6,18 @@ import com.insightsoftware.brewer.model.Cerveja;
 
 public class CervejaSalvaEvent {
 
-	private Cerveja cerveja;
+  private Cerveja cerveja;
 
-	public CervejaSalvaEvent(Cerveja cerveja) {
-		this.cerveja = cerveja;
-	}
+  public CervejaSalvaEvent(Cerveja cerveja) {
+    this.cerveja = cerveja;
+  }
 
-	public Cerveja getCerveja() {
-		return cerveja;
-	}
-	
-	public boolean temFoto(){
-		return !StringUtils.isEmpty(cerveja.getFoto());
-	}
+  public Cerveja getCerveja() {
+    return cerveja;
+  }
+
+  public boolean temFoto() {
+    return !StringUtils.isEmpty(cerveja.getFoto());
+  }
 
 }

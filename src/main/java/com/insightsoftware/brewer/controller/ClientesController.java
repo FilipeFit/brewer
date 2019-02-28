@@ -27,47 +27,54 @@ import com.insightsoftware.brewer.service.exception.CpfCnpjClienteJaCadastradoEx
 @RequestMapping("/clientes")
 public class ClientesController {
 
-	@Autowired
-	private EstadoRepository estadoRepository;
+  private final EstadoRepository estadoRepository;
+  private final CadastroClienteService cadastroClienteService;
+  private final ClienteRepository clienteRepository;
 
-	@Autowired
-	private CadastroClienteService cadastroClienteService;
-	
-	@Autowired
-	private ClienteRepository clienteRepository;
+  @Autowired
+  public ClientesController(EstadoRepository estadoRepository,
+      CadastroClienteService cadastroClienteService,
+      ClienteRepository clienteRepository) {
+    this.estadoRepository = estadoRepository;
+    this.cadastroClienteService = cadastroClienteService;
+    this.clienteRepository = clienteRepository;
+  }
 
-	@RequestMapping("/novo")
-	public ModelAndView novo(Cliente cliente) {
-		ModelAndView mv = new ModelAndView("cliente/CadastroCliente");
-		mv.addObject("tiposPessoa", TipoPessoa.values());
-		mv.addObject("estados", estadoRepository.findAll());
-		return mv;
-	}
+  @RequestMapping("/novo")
+  public ModelAndView novo(Cliente cliente) {
+    ModelAndView mv = new ModelAndView("cliente/CadastroCliente");
+    mv.addObject("tiposPessoa", TipoPessoa.values());
+    mv.addObject("estados", estadoRepository.findAll());
+    return mv;
+  }
 
-	@PostMapping("/novo")
-	public ModelAndView salvar(@Valid Cliente cliente, BindingResult result, RedirectAttributes attributes) {
-		if (result.hasErrors()) {
-			return novo(cliente);
-		}
-		
-		try{
-			cadastroClienteService.salvar(cliente);
-		}catch(CpfCnpjClienteJaCadastradoException e){
-			result.rejectValue("cpfOuCnpj", e.getMessage(), e.getMessage());
-			return novo(cliente);
-		}
-		
-		attributes.addFlashAttribute("mensagem", "Cliente salvo com sucesso!");
-		return new ModelAndView("redirect:/clientes/novo");
-	}
-	
-	@GetMapping
-	public ModelAndView pesquisar(ClienteFilter filter, BindingResult result, @PageableDefault(size = 2) Pageable pageable, HttpServletRequest httpServletRequest){
-		ModelAndView mv = new ModelAndView("cliente/PesquisaClientes");
-		
-		PageWrapper<Cliente> pageWrapper = new PageWrapper<>(clienteRepository.filtrar(filter, pageable), httpServletRequest);
-		mv.addObject("pagina", pageWrapper);
-		return mv;
-	}
-	
+  @PostMapping("/novo")
+  public ModelAndView salvar(@Valid Cliente cliente, BindingResult result,
+      RedirectAttributes attributes) {
+    if (result.hasErrors()) {
+      return novo(cliente);
+    }
+
+    try {
+      cadastroClienteService.salvar(cliente);
+    } catch (CpfCnpjClienteJaCadastradoException e) {
+      result.rejectValue("cpfOuCnpj", e.getMessage(), e.getMessage());
+      return novo(cliente);
+    }
+
+    attributes.addFlashAttribute("mensagem", "Cliente salvo com sucesso!");
+    return new ModelAndView("redirect:/clientes/novo");
+  }
+
+  @GetMapping
+  public ModelAndView pesquisar(ClienteFilter filter, BindingResult result,
+      @PageableDefault(size = 2) Pageable pageable, HttpServletRequest httpServletRequest) {
+    ModelAndView mv = new ModelAndView("cliente/PesquisaClientes");
+
+    PageWrapper<Cliente> pageWrapper =
+        new PageWrapper<>(clienteRepository.filtrar(filter, pageable), httpServletRequest);
+    mv.addObject("pagina", pageWrapper);
+    return mv;
+  }
+
 }

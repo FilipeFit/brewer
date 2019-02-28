@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="70f28780-c976-4d1d-b36b-81741d375327" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/brewer_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/brewer_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_mxab_thymeleaf_extras_thymeleaf_extras_data_attribute_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_39.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_coobird_thumbnailator_0_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_expression_processor_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_2_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_1_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_java8_5_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_4_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_12_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_10_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity4_3_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring4_3_0_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/brewer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/JPAConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/JPAConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/ServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/init/AppInmitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/init/AppInmitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/init/SecurityInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/config/init/SecurityInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/CervejasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/CervejasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/CidadesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/CidadesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/ClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/ClientesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/EstilosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/EstilosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/FotosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/FotosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/SegurancaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/SegurancaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/UsuariosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/UsuariosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/converter/CidadeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/converter/CidadeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/converter/EstadoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/converter/EstadoConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/converter/EstiloConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/converter/EstiloConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/converter/GrupoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/converter/GrupoConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/handler/ControllerAdviceExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/handler/ControllerAdviceExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/page/PageWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/controller/page/PageWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Cerveja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Cerveja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Cidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Cidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Estado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Estado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Estilo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Estilo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Grupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Grupo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Origem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Origem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Permissao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Permissao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Sabor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Sabor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/TipoPessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/TipoPessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/CervejaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/CervejaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/CidadeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/CidadeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/ClienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/ClienteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/EstadoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/EstadoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/EstiloRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/EstiloRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/GrupoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/GrupoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/CervejaFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/CervejaFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/CidadeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/CidadeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/ClienteFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/ClienteFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/EstiloFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/EstiloFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cerveja/CervejaRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cerveja/CervejaRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cerveja/CervejaRepositoryQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cerveja/CervejaRepositoryQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cidade/CidadeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cidade/CidadeRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cidade/CidadeRepositoryQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cidade/CidadeRepositoryQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cliente/ClienteRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cliente/ClienteRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cliente/ClienteRepositoryQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cliente/ClienteRepositoryQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/estilo/EstiloRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/estilo/EstiloRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/estilo/EstiloRepositoryQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/estilo/EstiloRepositoryQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/usuario/UsuarioRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/usuario/UsuarioRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/usuario/UsuarioRepositoryQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/usuario/UsuarioRepositoryQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/paginacao/PaginacaoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/paginacao/PaginacaoUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/security/AppUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/security/AppUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroCervejaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroCervejaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroCidadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroCidadeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroClienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroEstiloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroEstiloService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroUsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroUsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/event/cerveja/CervejaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/event/cerveja/CervejaListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/event/cerveja/CervejaSalvaEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/event/cerveja/CervejaSalvaEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/CidadeJaExistenteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/CidadeJaExistenteException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/CpfCnpjClienteJaCadastradoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/CpfCnpjClienteJaCadastradoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/EmailCadastradoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/EmailCadastradoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/NomeEstiloJaCadastradoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/NomeEstiloJaCadastradoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/SenhaObrigatoriaUsuarioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/SenhaObrigatoriaUsuarioException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/storage/FotoStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/storage/FotoStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/storage/FotosStorageRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/storage/FotosStorageRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/BrewerDialect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/BrewerDialect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/ClassForErrorAttributeTagProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/ClassForErrorAttributeTagProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/MessageElementTagProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/MessageElementTagProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/OrderElementTagProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/OrderElementTagProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/PaginationElementTagProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/PaginationElementTagProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/AtributoConfirmacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/AtributoConfirmacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/validator/AtributoConfirmacaoValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/validator/AtributoConfirmacaoValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/validator/AtributoConfirmacaoValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/AtributoConfirmacao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/SKU.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>jac</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Grupo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Origem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Permissao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Sabor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/TipoPessoa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Usuario.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/CervejaFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/CidadeFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/ClienteFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/EstiloFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cerveja/CervejaRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cerveja/CervejaRepositoryQueries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cidade/CidadeRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cidade/CidadeRepositoryQueries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cliente/ClienteRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cliente/ClienteRepositoryQueries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/estilo/EstiloRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/estilo/EstiloRepositoryQueries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/usuario/UsuarioRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/usuario/UsuarioRepositoryQueries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/paginacao/PaginacaoUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/CervejaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/CidadeRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/ClienteRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/EstadoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/EstiloRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/GrupoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/UsuarioRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/security/AppUserDetailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroCervejaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroCidadeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroClienteService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroEstiloService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroUsuarioService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/storage/FotosStorageRunnable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/storage/FotoStorage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/BrewerDialect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/CidadeJaExistenteException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/CpfCnpjClienteJaCadastradoException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/EmailCadastradoException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/NomeEstiloJaCadastradoException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/SenhaObrigatoriaUsuarioException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/event/cerveja/CervejaListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/event/cerveja/CervejaSalvaEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/ClassForErrorAttributeTagProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/MessageElementTagProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/OrderElementTagProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/PaginationElementTagProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/validator/AtributoConfirmacaoValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/AtributoConfirmacao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/SKU.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1920" />
+    <option name="y" value="-2" />
+    <option name="width" value="1920" />
+    <option name="height" value="1082" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="cerveja" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="cidade" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="estilo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="usuario" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="paginacao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="cerveja" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="thymeleaf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="thymeleaf" type="462c0819:PsiDirectoryNode" />
+              <item name="processor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brewer" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+              <item name="validator" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70f28780-c976-4d1d-b36b-81741d375327" name="Default Changelist" comment="" />
+      <created>1551371675001</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551371675001</updated>
+      <workItem from="1551371677999" duration="1089000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1089000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1920" y="-2" width="1920" height="1082" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Learn" order="4" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info id="Designer" order="6" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.2497332" />
+      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.24838012" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="SonarLint" order="3" weight="0.32937366" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="10" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Google Cloud Storage" order="1" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Bean Validation" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Grupo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Origem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Permissao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Sabor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/TipoPessoa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/model/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/EstiloFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/ClienteFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/CidadeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/filter/CervejaFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cerveja/CervejaRepositoryQueries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cerveja/CervejaRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#1031#1061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cidade/CidadeRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding>
+            <element signature="e#1018#1048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cidade/CidadeRepositoryQueries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cliente/ClienteRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/cliente/ClienteRepositoryQueries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/estilo/EstiloRepositoryQueries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/estilo/EstiloRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/usuario/UsuarioRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/helper/usuario/UsuarioRepositoryQueries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/paginacao/PaginacaoUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/CervejaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/CidadeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/ClienteRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/EstadoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/EstiloRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/GrupoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/repository/UsuarioRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/security/AppUserDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroCervejaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroCidadeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroClienteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroEstiloService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/CadastroUsuarioService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/storage/FotosStorageRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/storage/FotoStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/BrewerDialect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/CidadeJaExistenteException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/CpfCnpjClienteJaCadastradoException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/EmailCadastradoException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/NomeEstiloJaCadastradoException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/exception/SenhaObrigatoriaUsuarioException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/event/cerveja/CervejaListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/service/event/cerveja/CervejaSalvaEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/ClassForErrorAttributeTagProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/MessageElementTagProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/OrderElementTagProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/thymeleaf/processor/PaginationElementTagProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/validator/AtributoConfirmacaoValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/AtributoConfirmacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/insightsoftware/brewer/validation/SKU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

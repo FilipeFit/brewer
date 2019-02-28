@@ -47,102 +47,102 @@ import com.insightsoftware.brewer.thymeleaf.BrewerDialect;
 import nz.net.ultraq.thymeleaf.LayoutDialect;
 
 @Configuration
-@ComponentScan(basePackageClasses = { CervejasController.class })
+@ComponentScan(basePackageClasses = {CervejasController.class})
 @EnableWebMvc
 @EnableSpringDataWebSupport
 @EnableCaching
 public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 
-	private ApplicationContext applicationContext;
+  private ApplicationContext applicationContext;
 
-	@Override
-	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-		this.applicationContext = applicationContext;
+  @Override
+  public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+    this.applicationContext = applicationContext;
 
-	}
+  }
 
-	@Bean
-	public ViewResolver viewResolver() {
-		ThymeleafViewResolver resolver = new ThymeleafViewResolver();
-		resolver.setTemplateEngine(templateEngine());
-		resolver.setCharacterEncoding("UTF-8");
-		return resolver;
-	}
+  @Bean
+  public ViewResolver viewResolver() {
+    ThymeleafViewResolver resolver = new ThymeleafViewResolver();
+    resolver.setTemplateEngine(templateEngine());
+    resolver.setCharacterEncoding("UTF-8");
+    return resolver;
+  }
 
-	@Bean
-	public TemplateEngine templateEngine() {
-		SpringTemplateEngine engine = new SpringTemplateEngine();
-		engine.setEnableSpringELCompiler(true);
-		engine.setTemplateResolver(templateResolver());
+  @Bean
+  public TemplateEngine templateEngine() {
+    SpringTemplateEngine engine = new SpringTemplateEngine();
+    engine.setEnableSpringELCompiler(true);
+    engine.setTemplateResolver(templateResolver());
 
-		engine.addDialect(new LayoutDialect());
-		engine.addDialect(new BrewerDialect());
-		engine.addDialect(new DataAttributeDialect());
-		engine.addDialect(new SpringSecurityDialect());
-		return engine;
-	}
+    engine.addDialect(new LayoutDialect());
+    engine.addDialect(new BrewerDialect());
+    engine.addDialect(new DataAttributeDialect());
+    engine.addDialect(new SpringSecurityDialect());
+    return engine;
+  }
 
-	@Bean
-	public FormattingConversionService mvcConversionService() {
-		DefaultFormattingConversionService conversionService = new DefaultFormattingConversionService();
-		conversionService.addConverter(new EstiloConverter());
-		conversionService.addConverter(new CidadeConverter());
-		conversionService.addConverter(new EstadoConverter());
-		conversionService.addConverter(new GrupoConverter());
+  @Bean
+  public FormattingConversionService mvcConversionService() {
+    DefaultFormattingConversionService conversionService = new DefaultFormattingConversionService();
+    conversionService.addConverter(new EstiloConverter());
+    conversionService.addConverter(new CidadeConverter());
+    conversionService.addConverter(new EstadoConverter());
+    conversionService.addConverter(new GrupoConverter());
 
-		NumberStyleFormatter bigDecimalFormatter = new NumberStyleFormatter("#,##0.00");
-		conversionService.addFormatterForFieldType(BigDecimal.class, bigDecimalFormatter);
+    NumberStyleFormatter bigDecimalFormatter = new NumberStyleFormatter("#,##0.00");
+    conversionService.addFormatterForFieldType(BigDecimal.class, bigDecimalFormatter);
 
-		NumberStyleFormatter integerFormatter = new NumberStyleFormatter("#,##0.00");
-		conversionService.addFormatterForFieldType(Integer.class, integerFormatter);
-		
-		// API de Datas do Java 8
-		DateTimeFormatterRegistrar dateTimeFormatter = new DateTimeFormatterRegistrar();
-		dateTimeFormatter.setDateFormatter(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-		dateTimeFormatter.registerFormatters(conversionService);
+    NumberStyleFormatter integerFormatter = new NumberStyleFormatter("#,##0.00");
+    conversionService.addFormatterForFieldType(Integer.class, integerFormatter);
 
-		return conversionService;
-	}
+    // API de Datas do Java 8
+    DateTimeFormatterRegistrar dateTimeFormatter = new DateTimeFormatterRegistrar();
+    dateTimeFormatter.setDateFormatter(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    dateTimeFormatter.registerFormatters(conversionService);
 
-	@Bean
-	public LocaleResolver localeResolver() {
-		return new FixedLocaleResolver(new Locale("pt", "BR"));
+    return conversionService;
+  }
 
-	}
-	
-	@Bean
-	public CacheManager cacheManager(){
-		CacheBuilder<Object, Object> cacheBuilder = CacheBuilder.newBuilder()
-				.maximumSize(3)
-				.expireAfterAccess(20, TimeUnit.SECONDS);
-		
-		GuavaCacheManager cacheManager = new GuavaCacheManager();
-		cacheManager.setCacheBuilder(cacheBuilder);
-		return cacheManager;
-		
-	}
-	
-	@Bean
-	public MessageSource messageSource(){
-		ReloadableResourceBundleMessageSource bundle = new ReloadableResourceBundleMessageSource();
-		bundle.setBasename("classpath:/messages");
-		bundle.setDefaultEncoding("UTF-8");
-		return bundle;
-	}
+  @Bean
+  public LocaleResolver localeResolver() {
+    return new FixedLocaleResolver(new Locale("pt", "BR"));
 
-	private ITemplateResolver templateResolver() {
-		SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
-		resolver.setApplicationContext(applicationContext);
-		resolver.setPrefix("classpath:/templates/");
-		resolver.setSuffix(".html");
+  }
 
-		resolver.setTemplateMode(TemplateMode.HTML);
-		return resolver;
-	}
+  @Bean
+  public CacheManager cacheManager() {
+    CacheBuilder<Object, Object> cacheBuilder = CacheBuilder.newBuilder()
+        .maximumSize(3)
+        .expireAfterAccess(20, TimeUnit.SECONDS);
 
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
-	}
+    GuavaCacheManager cacheManager = new GuavaCacheManager();
+    cacheManager.setCacheBuilder(cacheBuilder);
+    return cacheManager;
+
+  }
+
+  @Bean
+  public MessageSource messageSource() {
+    ReloadableResourceBundleMessageSource bundle = new ReloadableResourceBundleMessageSource();
+    bundle.setBasename("classpath:/messages");
+    bundle.setDefaultEncoding("UTF-8");
+    return bundle;
+  }
+
+  private ITemplateResolver templateResolver() {
+    SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
+    resolver.setApplicationContext(applicationContext);
+    resolver.setPrefix("classpath:/templates/");
+    resolver.setSuffix(".html");
+
+    resolver.setTemplateMode(TemplateMode.HTML);
+    return resolver;
+  }
+
+  @Override
+  public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
+  }
 
 }

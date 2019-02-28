@@ -18,28 +18,32 @@ import com.insightsoftware.brewer.storage.FotosStorageRunnable;
 @RequestMapping("/fotos")
 public class FotosController {
 
-	@Autowired
-	private FotoStorage fotoStorage;
+  private final FotoStorage fotoStorage;
 
-	@PostMapping
-	public DeferredResult<FotoDTO> upload(@RequestParam("files[]") MultipartFile[] files) {
-		DeferredResult<FotoDTO> resultado = new DeferredResult<>();
+  @Autowired
+  public FotosController(FotoStorage fotoStorage) {
+    this.fotoStorage = fotoStorage;
+  }
 
-		Thread thread = new Thread(new FotosStorageRunnable(files, resultado, fotoStorage));
-		thread.start();
+  @PostMapping
+  public DeferredResult<FotoDTO> upload(@RequestParam("files[]") MultipartFile[] files) {
+    DeferredResult<FotoDTO> resultado = new DeferredResult<>();
 
-		return resultado;
+    Thread thread = new Thread(new FotosStorageRunnable(files, resultado, fotoStorage));
+    thread.start();
 
-	}
+    return resultado;
 
-	@GetMapping("/temp/{nome:.*}")
-	public byte[] recuperarFotoTemporaria(@PathVariable String nome) {
-		return fotoStorage.recuperarFotoTemporaria(nome);
-	}
-	
-	@GetMapping("/{nome:.*}")
-	public byte[] recuperar(@PathVariable String nome) {
-		return fotoStorage.recuperar(nome);
-	}	
+  }
+
+  @GetMapping("/temp/{nome:.*}")
+  public byte[] recuperarFotoTemporaria(@PathVariable String nome) {
+    return fotoStorage.recuperarFotoTemporaria(nome);
+  }
+
+  @GetMapping("/{nome:.*}")
+  public byte[] recuperar(@PathVariable String nome) {
+    return fotoStorage.recuperar(nome);
+  }
 
 }

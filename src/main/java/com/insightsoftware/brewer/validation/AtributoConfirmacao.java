@@ -12,19 +12,20 @@ import javax.validation.constraints.Pattern;
 
 import com.insightsoftware.brewer.validation.validator.AtributoConfirmacaoValidator;
 
-@Target({ ElementType.TYPE })
+@Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = { AtributoConfirmacaoValidator.class })
+@Constraint(validatedBy = {AtributoConfirmacaoValidator.class})
 public @interface AtributoConfirmacao {
-	
-	@OverridesAttribute(constraint = Pattern.class, name = "message")
-	String message() default "Atributos não conferem";
 
-	Class<?>[] groups() default {};
+  @OverridesAttribute(constraint = Pattern.class, name = "message")
+  String message() default "Atributos não conferem";
 
-	Class<? extends Payload>[] payload() default {};
-	
-	String atributo();
-	String atributoConfirmacao();
+  Class<?>[] groups() default {};
+
+  Class<? extends Payload>[] payload() default {};
+
+  String atributo();
+
+  String atributoConfirmacao();
 
 }

@@ -21,130 +21,127 @@ import org.hibernate.validator.constraints.NotBlank;
 
 import com.insightsoftware.brewer.validation.AtributoConfirmacao;
 
-@AtributoConfirmacao(atributo = "senha", atributoConfirmacao = "confirmacaoSenha", message = "Confirmação da senha não confere")
+@AtributoConfirmacao(atributo = "senha", atributoConfirmacao = "confirmacaoSenha",
+    message = "Confirmação da senha não confere")
 @Entity
 @Table(name = "usuario")
 public class Usuario implements Serializable {
 
-	private static final long serialVersionUID = 642874517514232687L;
+  private static final long serialVersionUID = 642874517514232687L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long codigo;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long codigo;
 
-	@NotBlank(message = "Nome é obrigatório")
-	private String nome;
+  @NotBlank(message = "Nome é obrigatório")
+  private String nome;
 
-	@NotBlank(message = "Email é obrigatório")
-	@Email(message = "Email inválido")
-	private String email;
+  @NotBlank(message = "Email é obrigatório")
+  @Email(message = "Email inválido")
+  private String email;
 
-	private String senha;
+  private String senha;
 
-	@Transient
-	private String confirmacaoSenha;
+  @Transient
+  private String confirmacaoSenha;
 
-	private boolean ativo;
+  private boolean ativo;
 
-	@Size(min = 1, message = "Selecione ao menos um grupo")
-	@ManyToMany
-	@JoinTable(name = "usuario_grupo", joinColumns = @JoinColumn(name = "codigo_usuario"), inverseJoinColumns = @JoinColumn(name = "codigo_grupo"))
-	private List<Grupo> grupos;
+  @Size(min = 1, message = "Selecione ao menos um grupo")
+  @ManyToMany
+  @JoinTable(name = "usuario_grupo", joinColumns = @JoinColumn(name = "codigo_usuario"),
+      inverseJoinColumns = @JoinColumn(name = "codigo_grupo"))
+  private List<Grupo> grupos;
 
-	@Column(name = "data_nascimento")
-	private LocalDate dataNascimento;
+  @Column(name = "data_nascimento")
+  private LocalDate dataNascimento;
 
-	public Long getCodigo() {
-		return codigo;
-	}
+  public Long getCodigo() {
+    return codigo;
+  }
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
+  public void setCodigo(Long codigo) {
+    this.codigo = codigo;
+  }
 
-	public String getNome() {
-		return nome;
-	}
+  public String getNome() {
+    return nome;
+  }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-	public String getEmail() {
-		return email;
-	}
+  public String getEmail() {
+    return email;
+  }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-	public String getSenha() {
-		return senha;
-	}
+  public String getSenha() {
+    return senha;
+  }
 
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
+  public void setSenha(String senha) {
+    this.senha = senha;
+  }
 
-	public boolean isAtivo() {
-		return ativo;
-	}
+  public boolean isAtivo() {
+    return ativo;
+  }
 
-	public void setAtivo(boolean ativo) {
-		this.ativo = ativo;
-	}
+  public void setAtivo(boolean ativo) {
+    this.ativo = ativo;
+  }
 
-	public LocalDate getDataNascimento() {
-		return dataNascimento;
-	}
+  public LocalDate getDataNascimento() {
+    return dataNascimento;
+  }
 
-	public void setDataNascimento(LocalDate dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
+  public void setDataNascimento(LocalDate dataNascimento) {
+    this.dataNascimento = dataNascimento;
+  }
 
-	public List<Grupo> getGrupos() {
-		return grupos;
-	}
+  public List<Grupo> getGrupos() {
+    return grupos;
+  }
 
-	public void setGrupos(List<Grupo> grupos) {
-		this.grupos = grupos;
-	}
+  public void setGrupos(List<Grupo> grupos) {
+    this.grupos = grupos;
+  }
 
-	public String getConfirmacaoSenha() {
-		return confirmacaoSenha;
-	}
+  public String getConfirmacaoSenha() {
+    return confirmacaoSenha;
+  }
 
-	public void setConfirmacaoSenha(String confirmacaoSenha) {
-		this.confirmacaoSenha = confirmacaoSenha;
-	}
-	
-	public boolean isNovo(){
-		return codigo == null;
-	}
+  public void setConfirmacaoSenha(String confirmacaoSenha) {
+    this.confirmacaoSenha = confirmacaoSenha;
+  }
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
-		return result;
-	}
+  public boolean isNovo() {
+    return codigo == null;
+  }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Usuario other = (Usuario) obj;
-		if (codigo == null) {
-			if (other.codigo != null)
-				return false;
-		} else if (!codigo.equals(other.codigo))
-			return false;
-		return true;
-	}
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+    return result;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) { return true; }
+    if (obj == null) { return false; }
+    if (getClass() != obj.getClass()) { return false; }
+    Usuario other = (Usuario) obj;
+    if (codigo == null) {
+      if (other.codigo != null) { return false; }
+    } else if (!codigo.equals(other.codigo)) { return false; }
+    return true;
+  }
 
 }

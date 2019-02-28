@@ -13,8 +13,8 @@ import com.insightsoftware.brewer.repository.helper.cidade.CidadeRepositoryQueri
 @Repository
 public interface CidadeRepository extends JpaRepository<Cidade, Long>, CidadeRepositoryQueries {
 
-	public List<Cidade> findByEstadoCodigo(Long codigoEstado);
-	
-	public Optional<Cidade> findByNomeAndEstado(String nome, Estado estado);
+  public List<Cidade> findByEstadoCodigo(Long codigoEstado);
+
+  public Optional<Cidade> findByNomeAndEstado(String nome, Estado estado);
 
 }

@@ -20,72 +20,67 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name = "cidade")
 public class Cidade implements Serializable {
 
-	private static final long serialVersionUID = -3852261132045194591L;
+  private static final long serialVersionUID = -3852261132045194591L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long codigo;
-	
-	@NotBlank(message="O nome da cidade é obrigatório")
-	private String nome;
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "codigo_estado")
-	@JsonIgnore
-	@NotNull(message = "O estado é obrigatório")
-	private Estado estado;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long codigo;
 
-	public Long getCodigo() {
-		return codigo;
-	}
-	
-	public boolean temEstado(){
-		return estado != null;
-	}
+  @NotBlank(message = "O nome da cidade é obrigatório")
+  private String nome;
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "codigo_estado")
+  @JsonIgnore
+  @NotNull(message = "O estado é obrigatório")
+  private Estado estado;
 
-	public String getNome() {
-		return nome;
-	}
+  public Long getCodigo() {
+    return codigo;
+  }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+  public boolean temEstado() {
+    return estado != null;
+  }
 
-	public Estado getEstado() {
-		return estado;
-	}
+  public void setCodigo(Long codigo) {
+    this.codigo = codigo;
+  }
 
-	public void setEstado(Estado estado) {
-		this.estado = estado;
-	}
+  public String getNome() {
+    return nome;
+  }
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
-		return result;
-	}
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Cidade other = (Cidade) obj;
-		if (codigo == null) {
-			if (other.codigo != null)
-				return false;
-		} else if (!codigo.equals(other.codigo))
-			return false;
-		return true;
-	}
+  public Estado getEstado() {
+    return estado;
+  }
+
+  public void setEstado(Estado estado) {
+    this.estado = estado;
+  }
+
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+    return result;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) { return true; }
+    if (obj == null) { return false; }
+    if (getClass() != obj.getClass()) { return false; }
+    Cidade other = (Cidade) obj;
+    if (codigo == null) {
+      if (other.codigo != null) { return false; }
+    } else if (!codigo.equals(other.codigo)) { return false; }
+    return true;
+  }
 
 }

@@ -21,42 +21,44 @@ import com.insightsoftware.brewer.repository.CervejaRepository;
 
 @Configuration
 @ComponentScan(basePackageClasses = CervejaRepository.class)
-@EnableJpaRepositories(basePackageClasses = CervejaRepository.class, enableDefaultTransactions = false)
+@EnableJpaRepositories(basePackageClasses = CervejaRepository.class,
+    enableDefaultTransactions = false)
 @EnableTransactionManagement
 public class JPAConfig {
 
-	@Bean
-	public DataSource dataSource() {
-		JndiDataSourceLookup dataSourceLookup = new JndiDataSourceLookup();
-		dataSourceLookup.setResourceRef(true);
-		return dataSourceLookup.getDataSource("jdbc/brewerDB");
-	}
+  @Bean
+  public DataSource dataSource() {
+    JndiDataSourceLookup dataSourceLookup = new JndiDataSourceLookup();
+    dataSourceLookup.setResourceRef(true);
+    return dataSourceLookup.getDataSource("jdbc/brewerDB");
+  }
 
-	@Bean
-	public JpaVendorAdapter jpaVendorAdapter() {
-		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-		adapter.setDatabase(Database.MYSQL);
-		adapter.setShowSql(false);
-		adapter.setGenerateDdl(false);
-		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
-		return adapter;
-	}
+  @Bean
+  public JpaVendorAdapter jpaVendorAdapter() {
+    HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
+    adapter.setDatabase(Database.MYSQL);
+    adapter.setShowSql(false);
+    adapter.setGenerateDdl(false);
+    adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
+    return adapter;
+  }
 
-	@Bean
-	public EntityManagerFactory entityManagerFactory(DataSource dataSource, JpaVendorAdapter jpaVendorAdapter) {
-		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
-		factory.setDataSource(dataSource);
-		factory.setJpaVendorAdapter(jpaVendorAdapter);
-		factory.setPackagesToScan(Cerveja.class.getPackage().getName());
-		factory.afterPropertiesSet();
-		return factory.getObject();
-	}
+  @Bean
+  public EntityManagerFactory entityManagerFactory(DataSource dataSource,
+      JpaVendorAdapter jpaVendorAdapter) {
+    LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+    factory.setDataSource(dataSource);
+    factory.setJpaVendorAdapter(jpaVendorAdapter);
+    factory.setPackagesToScan(Cerveja.class.getPackage().getName());
+    factory.afterPropertiesSet();
+    return factory.getObject();
+  }
 
-	@Bean
-	public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
-		JpaTransactionManager transactionManager = new JpaTransactionManager();
-		transactionManager.setEntityManagerFactory(entityManagerFactory);
-		return transactionManager;
-	}
+  @Bean
+  public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
+    JpaTransactionManager transactionManager = new JpaTransactionManager();
+    transactionManager.setEntityManagerFactory(entityManagerFactory);
+    return transactionManager;
+  }
 
 }

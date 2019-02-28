@@ -9,7 +9,7 @@ import com.insightsoftware.brewer.model.Usuario;
 import com.insightsoftware.brewer.repository.helper.usuario.UsuarioRepositoryQueries;
 
 @Repository
-public interface UsuarioRepository extends JpaRepository<Usuario, Long>, UsuarioRepositoryQueries{
+public interface UsuarioRepository extends JpaRepository<Usuario, Long>, UsuarioRepositoryQueries {
 
-	public Optional<Usuario> findByEmailIgnoreCase(String email);
+  public Optional<Usuario> findByEmailIgnoreCase(String email);
 }

@@ -13,18 +13,24 @@ import com.insightsoftware.brewer.service.exception.CpfCnpjClienteJaCadastradoEx
 @Service
 public class CadastroClienteService {
 
-	@Autowired
-	private ClienteRepository clienteRepository;
+  private final ClienteRepository clienteRepository;
 
-	@Transactional
-	public void salvar(Cliente cliente) {
-		Optional<Cliente> clienteExistente = clienteRepository.findByCpfOuCnpj(cliente.getCpfOuCnpjSemFormatacao());
+  @Autowired
+  public CadastroClienteService(
+      ClienteRepository clienteRepository) {
+    this.clienteRepository = clienteRepository;
+  }
 
-		if (clienteExistente.isPresent()) {
-			throw new CpfCnpjClienteJaCadastradoException("CPF ou CNPJ já cadastrado");
-		}
+  @Transactional
+  public void salvar(Cliente cliente) {
+    Optional<Cliente> clienteExistente =
+        clienteRepository.findByCpfOuCnpj(cliente.getCpfOuCnpjSemFormatacao());
 
-		clienteRepository.save(cliente);
-	}
+    if (clienteExistente.isPresent()) {
+      throw new CpfCnpjClienteJaCadastradoException("CPF ou CNPJ já cadastrado");
+    }
+
+    clienteRepository.save(cliente);
+  }
 
 }

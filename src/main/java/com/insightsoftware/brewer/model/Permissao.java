@@ -12,27 +12,27 @@ import javax.persistence.Table;
 @Table(name = "permissao")
 public class Permissao implements Serializable {
 
-	private static final long serialVersionUID = -3548127666415202279L;
+  private static final long serialVersionUID = -3548127666415202279L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long codigo;
-	private String nome;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long codigo;
+  private String nome;
 
-	public Long getCodigo() {
-		return codigo;
-	}
+  public Long getCodigo() {
+    return codigo;
+  }
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
+  public void setCodigo(Long codigo) {
+    this.codigo = codigo;
+  }
 
-	public String getNome() {
-		return nome;
-	}
+  public String getNome() {
+    return nome;
+  }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
 }

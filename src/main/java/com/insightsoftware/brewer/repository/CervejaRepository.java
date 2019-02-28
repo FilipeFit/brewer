@@ -10,7 +10,7 @@ import com.insightsoftware.brewer.repository.helper.cerveja.CervejaRepositoryQue
 
 @Repository
 public interface CervejaRepository extends JpaRepository<Cerveja, Long>, CervejaRepositoryQueries {
-	
-	public Optional<Cerveja> findBySkuIgnoreCase(String sku);
+
+  public Optional<Cerveja> findBySkuIgnoreCase(String sku);
 
 }

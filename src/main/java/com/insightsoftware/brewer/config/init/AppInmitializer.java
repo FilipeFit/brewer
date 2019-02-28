@@ -13,31 +13,31 @@ import com.insightsoftware.brewer.config.WebConfig;
 
 public class AppInmitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-	@Override
-	protected Class<?>[] getRootConfigClasses() {
-		return new Class<?>[] { JPAConfig.class, ServiceConfig.class, SecurityConfig.class };
-	}
+  @Override
+  protected Class<?>[] getRootConfigClasses() {
+    return new Class<?>[] {JPAConfig.class, ServiceConfig.class, SecurityConfig.class};
+  }
 
-	@Override
-	protected Class<?>[] getServletConfigClasses() {
-		return new Class<?>[] { WebConfig.class };
-	}
+  @Override
+  protected Class<?>[] getServletConfigClasses() {
+    return new Class<?>[] {WebConfig.class};
+  }
 
-	@Override
-	protected String[] getServletMappings() {
+  @Override
+  protected String[] getServletMappings() {
 
-		return new String[] { "/" };
-	}
+    return new String[] {"/"};
+  }
 
-	@Override
-	protected Filter[] getServletFilters() {
+  @Override
+  protected Filter[] getServletFilters() {
 
-		return new Filter[] { };
-	}
-	
-	@Override
-	protected void customizeRegistration(Dynamic registration) {
-		registration.setMultipartConfig(new MultipartConfigElement(""));
-	}
+    return new Filter[] {};
+  }
+
+  @Override
+  protected void customizeRegistration(Dynamic registration) {
+    registration.setMultipartConfig(new MultipartConfigElement(""));
+  }
 
 }

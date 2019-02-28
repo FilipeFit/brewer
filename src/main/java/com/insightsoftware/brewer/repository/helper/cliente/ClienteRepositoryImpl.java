@@ -22,45 +22,45 @@ import com.insightsoftware.brewer.repository.paginacao.PaginacaoUtil;
 
 public class ClienteRepositoryImpl implements ClienteRepositoryQueries {
 
-	@PersistenceContext
-	private EntityManager entityManager;
+  @PersistenceContext
+  private EntityManager entityManager;
 
-	@Autowired
-	PaginacaoUtil paginacaoUtil;
+  @Autowired
+  PaginacaoUtil paginacaoUtil;
 
-	@SuppressWarnings("unchecked")
-	@Override
-	@Transactional(readOnly = true)
-	public Page<Cliente> filtrar(ClienteFilter filter, Pageable pageable) {
-		Criteria criteria = entityManager.unwrap(Session.class).createCriteria(Cliente.class);
+  @SuppressWarnings("unchecked")
+  @Override
+  @Transactional(readOnly = true)
+  public Page<Cliente> filtrar(ClienteFilter filter, Pageable pageable) {
+    Criteria criteria = entityManager.unwrap(Session.class).createCriteria(Cliente.class);
 
-		paginacaoUtil.preparar(criteria, pageable);
-		adicionaFiltro(filter, criteria);
-		criteria.createAlias("endereco.cidade","c",JoinType.LEFT_OUTER_JOIN);
-		criteria.createAlias("c.estado","e", JoinType.LEFT_OUTER_JOIN);
+    paginacaoUtil.preparar(criteria, pageable);
+    adicionaFiltro(filter, criteria);
+    criteria.createAlias("endereco.cidade", "c", JoinType.LEFT_OUTER_JOIN);
+    criteria.createAlias("c.estado", "e", JoinType.LEFT_OUTER_JOIN);
 
-		return new PageImpl<>(criteria.list(), pageable, total(filter));
-	}
+    return new PageImpl<>(criteria.list(), pageable, total(filter));
+  }
 
-	private void adicionaFiltro(ClienteFilter filter, Criteria criteria) {
+  private void adicionaFiltro(ClienteFilter filter, Criteria criteria) {
 
-		if (filter != null) {
-			if (!StringUtils.isEmpty(filter.getNome())) {
-				criteria.add(Restrictions.ilike("nome", filter.getNome(), MatchMode.ANYWHERE));
-			}
+    if (filter != null) {
+      if (!StringUtils.isEmpty(filter.getNome())) {
+        criteria.add(Restrictions.ilike("nome", filter.getNome(), MatchMode.ANYWHERE));
+      }
 
-			if (!StringUtils.isEmpty(filter.getCpfOuCnpj())) {
-				criteria.add(Restrictions.eq("cpfOuCnpj", filter.getCpfOuCnpj()));
-			}
-		}
+      if (!StringUtils.isEmpty(filter.getCpfOuCnpj())) {
+        criteria.add(Restrictions.eq("cpfOuCnpj", filter.getCpfOuCnpj()));
+      }
+    }
 
-	}
+  }
 
-	private Long total(ClienteFilter filter) {
-		Criteria criteria = entityManager.unwrap(Session.class).createCriteria(Cliente.class);
-		adicionaFiltro(filter, criteria);
-		criteria.setProjection(Projections.rowCount());
-		return (Long) criteria.uniqueResult();
-	}
+  private Long total(ClienteFilter filter) {
+    Criteria criteria = entityManager.unwrap(Session.class).createCriteria(Cliente.class);
+    adicionaFiltro(filter, criteria);
+    criteria.setProjection(Projections.rowCount());
+    return (Long) criteria.uniqueResult();
+  }
 
 }

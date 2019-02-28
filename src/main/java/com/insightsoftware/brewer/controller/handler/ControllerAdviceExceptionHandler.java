@@ -8,11 +8,12 @@ import com.insightsoftware.brewer.service.exception.NomeEstiloJaCadastradoExcept
 
 @RestControllerAdvice
 public class ControllerAdviceExceptionHandler {
-	
-	@ExceptionHandler(NomeEstiloJaCadastradoException.class)
-	public ResponseEntity<String> handleNomeEstiloJaCadastradoException(NomeEstiloJaCadastradoException e){
-		
-		return ResponseEntity.badRequest().body(e.getMessage());
-		
-	}
+
+  @ExceptionHandler(NomeEstiloJaCadastradoException.class)
+  public ResponseEntity<String> handleNomeEstiloJaCadastradoException(
+      NomeEstiloJaCadastradoException e) {
+
+    return ResponseEntity.badRequest().body(e.getMessage());
+
+  }
 }

@@ -11,6 +11,6 @@ import com.insightsoftware.brewer.repository.helper.cliente.ClienteRepositoryQue
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long>, ClienteRepositoryQueries {
 
-	public Optional<Cliente> findByCpfOuCnpj(String cpfOuCnpj);
+  public Optional<Cliente> findByCpfOuCnpj(String cpfOuCnpj);
 
 }
